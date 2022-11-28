@@ -1,0 +1,52 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "source": "public/index.html",
+  "scripts": {
+    "start": "parcel",
+    "start:s": "parcel --port=3000 --https --lazy --open",
+    "build": "parcel build --public-url /",
+    "analyzer": "parcel build --reporter @parcel/reporter-bundle-analyzer",
+    "analyzer:buddy": "parcel build --reporter @parcel/reporter-bundle-buddy",
+    "check": "tsc --noEmit"
+  },
+  "alias": {
+    "process": false
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "web-vitals": "^3.1.0"
+  },
+  "devDependencies": {
+    "@parcel/compressor-brotli": "^2.8.0",
+    "@parcel/compressor-gzip": "^2.8.0",
+    "@parcel/config-default": "^2.8.0",
+    "@parcel/core": "^2.8.0",
+    "@parcel/packager-raw-url": "^2.8.0",
+    "@parcel/reporter-cli": "^2.8.0",
+    "@parcel/resolver-default": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
+    "@parcel/transformer-svg-react": "^2.8.0",
+    "@parcel/transformer-webmanifest": "^2.8.0",
+    "@parcel/validator-typescript": "^2.8.0",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "parcel": "^2.8.0",
+    "typescript": "^4.9.3"
+  }
+}
