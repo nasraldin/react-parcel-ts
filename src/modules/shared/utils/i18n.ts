@@ -21,7 +21,7 @@ export const languageDetect = (): string => {
  */
 export const _trans = (text: string) => {
   const keyName = `${NEXT_LOCALE_LANG_KEY}_${languageDetect()}`;
-  const cached = ls.get(keyName) as any;
+  const cached = ls.get(keyName) as never;
   if (cached) {
     const splitT = text.split('.');
     let key;
@@ -33,4 +33,6 @@ export const _trans = (text: string) => {
 
     return key;
   }
+
+  return null;
 };

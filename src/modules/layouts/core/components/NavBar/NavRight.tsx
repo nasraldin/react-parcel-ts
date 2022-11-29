@@ -1,7 +1,7 @@
-import LanguageSwitcher, { MenuType } from '@shared/components/LanguageSwitcher';
+import LanguageSwitcher, { MenuType } from '~shared/components/LanguageSwitcher';
 
 import AccountIcon from 'public/svg/account.svg';
-import AppDialog from '@shared/components/AppDialog';
+import AppDialog from '~shared/components/AppDialog';
 import FavoritesIcon from 'public/svg/favorites.svg';
 import HistoryIcon from 'public/svg/history.svg';
 import LanguageIcon from 'public/svg/language.svg';

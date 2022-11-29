@@ -31,7 +31,7 @@ export class LangService {
    * @returns true if supported, otherwise false
    */
   isSupportedLocale = (locale: string): boolean => {
-    if (!SUPPORTED_LOCALES.find((l) => l.locale === locale!)) {
+    if (!SUPPORTED_LOCALES.find((l) => l.locale === locale)) {
       log(`Our platform does not supported language ${locale} yet!`, LangService.name, LogLevel.Warning);
       return false;
     }
@@ -65,7 +65,7 @@ export class LangService {
       return;
     }
 
-    const localeDisplayName = SUPPORTED_LOCALES.find((l) => l.locale === locale!)!.displayName;
+    const localeDisplayName = SUPPORTED_LOCALES.find((l) => l.locale === locale)?.displayName;
     const docDir = locale?.match(Regex.Arabic) ? CheckDir(true) : CheckDir(false);
 
     ls.set(NEXT_LOCALE, locale);
@@ -73,8 +73,8 @@ export class LangService {
     this.fetchTranslations(locale);
 
     if (IS_BROWSER) {
-      window.document.documentElement.lang = locale!;
-      window.document.documentElement.dir = docDir!;
+      window.document.documentElement.lang = locale;
+      window.document.documentElement.dir = docDir;
     }
 
     log(
@@ -124,7 +124,7 @@ export class LangService {
    */
   _trans = (text: string) => {
     const keyName = `${NEXT_LOCALE_LANG_KEY}_${this.languageDetect()}`;
-    const cached = ls.get(keyName) as any;
+    const cached = ls.get(keyName) as never;
     if (cached) {
       const splitT = text.split('.');
       let key;
@@ -136,5 +136,7 @@ export class LangService {
 
       return key;
     }
+
+    return null;
   };
 }

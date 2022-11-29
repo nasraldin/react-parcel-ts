@@ -19,6 +19,6 @@ export class ConnectionTimedOutError extends ErrorResponse {
     this.message =
       message ??
       `The connection has timed out, The ${resourceName} resource could not be landed as the connection took too long to respond. Please try again after some time.`;
-    this.errors = errors!;
+    this.errors = errors;
   }
 }

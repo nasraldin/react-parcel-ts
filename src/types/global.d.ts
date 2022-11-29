@@ -15,7 +15,7 @@ See LICENSE in the project root for license information.
 
 // Allow to import JSON file into a TypeScript file
 declare module '*.json' {
-  const value: any;
+  const value: Record<string, unknown>;
   export default value;
 }
 

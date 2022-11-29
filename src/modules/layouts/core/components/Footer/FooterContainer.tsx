@@ -1,4 +1,4 @@
-import Copyright from '@shared/components/Copyright';
+import Copyright from '~shared/components/Copyright';
 
 const Footer = () => {
   return (

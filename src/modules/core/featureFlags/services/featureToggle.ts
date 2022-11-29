@@ -16,7 +16,7 @@ export const fetchFeatures = async () => {
       return [...result, [featureName, featureStatus]];
     }, []);
   } catch (e) {
-    console.error('Something went wrong', e);
+    // console.error('Something went wrong', e);
   }
 
   return [] as FeatureArray[];

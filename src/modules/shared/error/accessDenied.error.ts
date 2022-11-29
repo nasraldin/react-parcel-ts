@@ -17,6 +17,6 @@ export class AccessDeniedError extends ErrorResponse {
     this.status = StatusCode.Forbidden.status;
     this.statusText = StatusCode.Forbidden.name;
     this.message = message ?? `Access Denied, You Don’t Have Permission To Access The ${resourceName} Resource.`;
-    this.errors = errors!;
+    this.errors = errors;
   }
 }

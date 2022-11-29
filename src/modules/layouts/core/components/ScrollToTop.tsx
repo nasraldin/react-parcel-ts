@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import { BACK_TO_TOP_ANCHOR } from '~config/constants';
-
 const ScrollTop = () => {
   const [visible, setVisible] = useState(false);
   const top = 20;
+  const BACK_TO_TOP_ANCHOR = 'BACK_TO_TOP_ANCHOR';
 
   useEffect(() => {
     const onScroll = () => {

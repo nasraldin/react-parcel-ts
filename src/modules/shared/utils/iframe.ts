@@ -1,12 +1,12 @@
-import { IS_BROWSER } from '~config';
 import { includes } from 'lodash';
+import { IS_BROWSER } from '~config';
 
 /**
  * Resolves whether the current web page is running as an iframe from another page
  *
- * Iframes are only detectable on the client-side
+ * Iframe are only detectable on the client-side
  * Also, using iframe=true as search parameter forces iframe mode, it's handy when using an iframe from the same domain
- * (because same-domain iframes aren't detected when comparing window.parent and window.top since it's the same window)
+ * (because same-domain iframe aren't detected when comparing window.parent and window.top since it's the same window)
  *
  * @return {boolean}
  * @see https://stackoverflow.com/a/326076/2391795
@@ -16,7 +16,7 @@ export const isRunningInIframe = (): boolean => {
     try {
       return window.self !== window.top || includes(document.location.search, 'iframe=true');
     } catch (e) {
-      console.log('isRunningInIframe', e);
+      // console.log('isRunningInIframe', e);
       return false; // Can't tell
     }
   } else {
@@ -33,7 +33,7 @@ export const isRunningInIframe = (): boolean => {
  * @return {string}
  * @see https://stackoverflow.com/a/19438406/2391795
  */
-export const getIframeReferrer = (): any => {
+export const getIframeReferrer = (): unknown => {
   if (isRunningInIframe()) {
     try {
       return document.referrer || null;

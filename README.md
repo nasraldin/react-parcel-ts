@@ -36,3 +36,5 @@ You can view your images created with `docker images`.
 Deploy to vercel.com
 https://frontend-ajrly.vercel.app
 https://frontend-dun-psi.vercel.app
+
+https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html

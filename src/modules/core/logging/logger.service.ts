@@ -56,9 +56,9 @@ export class LogService {
   private writeToLog(msg: {}, level?: LogLevel, exception?: {}, tags?: []) {
     if (this.shouldLog(level!)) {
       // Build Log Entry
-      let entry: LogEntry = new LogEntry(msg, level, tags, exception);
+      const entry: LogEntry = new LogEntry(msg, level, tags, exception);
 
-      for (let logger of this.publishers) {
+      for (const logger of this.publishers) {
         console.log(
           `Logging: LogService => writeToLog logger: ${JSON.stringify(logger)} publishers: ${JSON.stringify(
             this.publishers,
@@ -71,13 +71,13 @@ export class LogService {
   }
 
   private shouldLog(level: LogLevel): boolean {
-    let ret: boolean = false;
+    let ret = false;
 
     if ((level === this.level && !ENABLE_PROD_LOGS) || this.level === LogLevel.Verbose) {
       ret = true;
     }
 
-    console.log(`Logging: LogService => shouldLog`, ret);
+    console.log('Logging: LogService => shouldLog', ret);
 
     return ret;
   }

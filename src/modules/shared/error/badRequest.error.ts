@@ -19,6 +19,6 @@ export class BadRequestError extends ErrorResponse {
     this.message =
       message ??
       `Bad Request, this is not a valid request. Please make sure the request is valid and try again. ${resourceName}`;
-    this.errors = errors!;
+    this.errors = errors;
   }
 }

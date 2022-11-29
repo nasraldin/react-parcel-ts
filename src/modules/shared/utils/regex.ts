@@ -8,5 +8,5 @@ export class Regex {
   public static readonly _Characters = /^[A-Za-z0-9-_]+$/;
   public static readonly MACAddress = /^[a-zA-Z0-9.:-]+$/;
   public static readonly AnyText = /^[a-zA-Z0-9\-+,_.()\s\u0600-\u06FF]+$/;
-  public static readonly AlphanumSpecialChars = /^[A-Za-z0-9 &/.-]+$/;
+  public static readonly StringAndNumbers = /^[A-Za-z0-9 &/.-]+$/;
 }

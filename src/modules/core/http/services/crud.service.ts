@@ -8,7 +8,7 @@ See LICENSE in the project root for license information.
 */
 
 // import { Axios, AxiosResponse } from 'axios';
-// import { MimeType, X_API_GATEWAY_KEY } from '@shared';
+// import { MimeType, X_API_GATEWAY_KEY } from '~shared';
 // import { NotFoundError, ServiceUnavailableError, UnAuthorizedError, UnknownError } from '@root/src/app/common/error';
 // import { ServiceError, ServiceResponse } from '../models';
 

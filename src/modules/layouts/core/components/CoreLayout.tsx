@@ -1,16 +1,10 @@
-'use client';
-
-import { BACK_TO_TOP_ANCHOR } from '~config/constants';
+import classnames from 'clsx';
+import React from 'react';
+import useHasMounted from '~shared/hooks/useHasMounted';
+import { LayoutType } from '../types';
 import CorePageContainer from './CorePageContainer';
 import Footer from './Footer/FooterContainer';
-import { LayoutType } from '../types';
 import NavBar from './NavBar/NavContainer';
-import React from 'react';
-import classnames from 'clsx';
-import useHasMounted from '@shared/hooks/useHasMounted';
-
-// import { NextRouter, useRouter } from 'next/navigation';
-
 // import { css } from '@emotion/react';
 
 export type Props = {
@@ -92,7 +86,7 @@ export type Props = {
  *
  * XXX Core component, meant to be used by other layouts, shouldn't be used by other components directly.
  */
-const CoreLayout: React.FunctionComponent<Props> = (props): JSX.Element => {
+const CoreLayout: React.FunctionComponent<Props> = (props) => {
   const hasMounted = useHasMounted();
   const {
     children,
@@ -102,19 +96,17 @@ const CoreLayout: React.FunctionComponent<Props> = (props): JSX.Element => {
     PageContainer = CorePageContainer,
     hideNav,
     hideFooter = true,
-    hidePreviewBanner = true,
     FooterComponent = null,
     Nav = null,
   } = props;
   // const router: NextRouter = useRouter();
   // const isIframeWithFullPagePreview = router?.query?.fullPagePreview === '1';
-  const isPreviewModeBannerDisplayed = !hidePreviewBanner && process.env.NEXT_PUBLIC_APP_STAGE !== 'production';
   const isNavDisplayed = !hideNav && Nav;
   const isFooterDisplayed = !hideFooter && Footer;
 
   if (!hasMounted) {
     // Returns null on client-side | server-side, until the component has mounted
-    return null!;
+    return null;
   }
 
   return (
@@ -126,7 +118,7 @@ const CoreLayout: React.FunctionComponent<Props> = (props): JSX.Element => {
       // `}
     >
       <NavBar />
-      <span id={BACK_TO_TOP_ANCHOR} />
+      <span id="BACK_TO_TOP_ANCHOR" />
 
       {/* Loaded from components/Head - See https://github.com/mikemaccana/outdated-browser-rework */}
       {/*<div*/}

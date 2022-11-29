@@ -6,7 +6,7 @@ import { IS_BROWSER } from '~config';
  * @param value
  * @returns true or false
  */
-export const CheckBoolean = (value: any): boolean => {
+export const CheckBoolean = (value: unknown): boolean => {
   return value === 'true' ? true : false;
 };
 
@@ -15,7 +15,7 @@ export const CheckBoolean = (value: any): boolean => {
  * @param isRtl
  * @returns rtl or ltr
  */
-export const CheckDir = (isRtl: boolean = false): string => {
+export const CheckDir = (isRtl = false): string => {
   return isRtl ? 'rtl' : 'ltr';
 };
 
@@ -28,7 +28,7 @@ export const _typeOf = {
    * @param prop object well check
    * @returns return the object type as Full Class like [object Array]
    */
-  check: (prop: any) => {
+  check: (prop: unknown) => {
     return Object.prototype.toString.call(prop);
   },
 

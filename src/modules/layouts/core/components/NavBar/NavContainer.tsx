@@ -1,4 +1,4 @@
-import AppLogo from '@shared/components/AppLogo';
+import AppLogo from '~shared/components/AppLogo';
 import Container from 'react-bootstrap/Container';
 import NavMenu from './NavLeft';
 import NavRight from './NavRight';

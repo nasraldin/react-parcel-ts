@@ -24,16 +24,16 @@ const logLevel: LogLevel = LOG_LEVEL as LogLevel;
 // *************************
 const writeToLog = (msg: {}, level?: LogLevel, fileName?: string, exception?: {}, tags?: []) => {
   if (shouldLog(level!)) {
-    let entry = new LogEntry({ Message: msg, FileName: fileName }, level ?? logLevel, tags, exception);
+    const entry = new LogEntry({ Message: msg, FileName: fileName }, level ?? logLevel, tags, exception);
 
-    for (let logger of publishersService.publishers) {
+    for (const logger of publishersService.publishers) {
       logger.log(entry);
     }
   }
 };
 
 const shouldLog = (level: LogLevel) => {
-  let ret: boolean = false;
+  let ret = false;
 
   if ((level === level && !ENABLE_PROD_LOGS) || level === LogLevel.Verbose) {
     ret = true;

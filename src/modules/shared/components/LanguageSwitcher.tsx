@@ -1,11 +1,8 @@
-'use client';
-
-import { LangService } from '@shared';
-import { useRouter } from 'next/navigation';
 import Form from 'react-bootstrap/Form';
 import Select from 'react-select';
 import { SUPPORTED_LOCALES } from '~config';
 import { log } from '~core/logging/logger';
+import { LangService } from '~shared';
 
 export enum MenuType {
   Select = 'select',
@@ -17,12 +14,10 @@ export type LanguageSwitcherProps = {
 };
 
 export default function LanguageSwitcher(props: LanguageSwitcherProps) {
-  const router = useRouter();
-  // const { pathname, asPath, query } = router;
   const langService = new LangService();
 
   const changeLanguage = (locale: string) => {
-    log(`Language changed`);
+    log('Language changed');
     langService.changeLanguage(locale);
     // i18n.changeLanguage(locale);
     // router.push({ usePathname, query }, asPath, { locale });
@@ -53,7 +48,9 @@ export default function LanguageSwitcher(props: LanguageSwitcherProps) {
       {props.menuType === MenuType.Select && (
         <Select
           name="select_locale"
-          onChange={(e) => changeLanguage(e?.value!)}
+          onChange={(e) => {
+            if (e) changeLanguage(e?.value);
+          }}
           options={SUPPORTED_LOCALES.map((l) => ({ value: l.locale, label: `${l.displayName} - ${l.culture}` }))}
           placeholder={'selectLanguage' as string}
         />

@@ -1,5 +1,3 @@
-'use client';
-
 import Navbar from 'react-bootstrap/Navbar';
 
 const AppLogo = () => {

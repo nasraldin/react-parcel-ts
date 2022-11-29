@@ -1,9 +1,9 @@
 {
   "name": "frontend",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "templateVersion": "0.0.1",
   "author": "Nasr Aldin <ns@nasraldin.com> (https://nasraldin.com)",
-  "description": "frontend app build with reactjs",
+  "description": "frontend app build with react js",
   "keywords": [
     "buy",
     "rent",
@@ -123,8 +123,6 @@
     "cross-env": "7.0.3",
     "eslint": "8.28.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-import-resolver-typescript": "3.5.2",
-    "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.31.11",

@@ -1,5 +1,6 @@
-import { FeatureToggleContext } from '../context';
+/* eslint-disable no-unused-vars */
 import { useContext } from 'react';
+import { FeatureToggleContext } from '../context';
 
 export const useFeatureToggle = () => {
   const { enabledFeatures, enableFeature, disableFeature } = useContext(FeatureToggleContext);

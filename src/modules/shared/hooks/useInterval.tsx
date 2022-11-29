@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useRef } from 'react';
 
 /**
@@ -13,6 +11,7 @@ import { useEffect, useRef } from 'react';
  *
  * @see https://overreacted.io/making-setinterval-declarative-with-react-hooks/
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const useInterval = (callback: any, delay: number) => {
   const savedCallback = useRef();
 
@@ -26,8 +25,7 @@ const useInterval = (callback: any, delay: number) => {
     if (delay === null) return;
 
     const tick = () => {
-      // @ts-ignore
-      savedCallback.current();
+      // if (savedCallback.current) savedCallback.current();
     };
 
     const id = setInterval(tick, delay);

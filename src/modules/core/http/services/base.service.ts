@@ -63,7 +63,8 @@ export interface BaseService {
    *
    * @returns any
    */
-  errorHandler(error: any, resourceName: string): unknown;
+  // eslint-disable-next-line no-unused-vars
+  errorHandler(error: unknown, resourceName: string): unknown;
 
   /**
    * Wrap http configs, headers etc...

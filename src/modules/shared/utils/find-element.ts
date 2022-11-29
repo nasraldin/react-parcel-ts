@@ -14,8 +14,10 @@ See LICENSE in the project root for license information.
  * @param propValue value
  * @returns el or will return undefined if not found
  */
-export function findElement(arr: any[], propName: any, propValue: any): any {
-  for (var i = 0; i < arr.length; i++) {
+export function findElement(arr: [], propName: string, propValue: string) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[parseInt(i.toFixed())][parseInt(propName)] == propValue) return arr[parseInt(i.toFixed())];
   }
+
+  return null;
 }

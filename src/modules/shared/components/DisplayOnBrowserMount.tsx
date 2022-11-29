@@ -1,7 +1,5 @@
-'use client';
-
-import React, { DependencyList, Fragment, useState } from 'react';
 import { size, some } from 'lodash';
+import React, { DependencyList, Fragment, useState } from 'react';
 
 type Props = {
   children: React.ReactNode;

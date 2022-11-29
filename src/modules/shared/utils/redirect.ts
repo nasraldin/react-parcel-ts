@@ -15,7 +15,7 @@
  * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections
  */
 const redirect = (
-  res: any,
+  res: unknown,
   location: string,
   statusCode: 200 | 300 | 301 | 302 | 303 | 304 | 307 | 308 = 302,
 ): void => {
@@ -31,9 +31,9 @@ const redirect = (
     throw new Error('Location required');
   }
 
-  res.statusCode = statusCode;
-  res.setHeader('Location', location);
-  res.end();
+  // res.statusCode = statusCode;
+  // res.setHeader('Location', location);
+  // res.end();
 };
 
 export default redirect;
