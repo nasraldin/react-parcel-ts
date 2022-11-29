@@ -1,0 +1,50 @@
+/*
+=============================================================================
+Copyright 2022 Nasr Aldin. All Rights Reserved.
+Project: Online Rent @frontend
+The use of this source code is governed by Nasr Aldin.
+See LICENSE in the project root for license information.
+=============================================================================
+*/
+
+/*
+ *  Core app styles
+ *  Project:    online rent
+ *  Release:    0.0.1
+ *  Author:     Nasr Aldin
+ *  Author URL: https://nasraldin.com
+ *  Released under the MIT license
+ *  Date: 2022-09-20 T3:54
+*/
+
+@charset 'UTF-8';
+
+/* -----------------------------------------------*
+ *                                               *
+ *             Global styles                *
+ *                                               *
+ ------------------------------------------------ */
+@import 'base/colors';
+
+/* -----------------------------------------------*
+ *                                               *
+ *             Third party styles                *
+ *                                               *
+ ------------------------------------------------ */
+// @import 'vendors/all';
+@import 'vendors/bootstrap';
+@import '~flag-icons/css/flag-icons.min.css';
+
+/* -----------------------------------------------*
+ *                                               *
+ *                  App Styles                   *
+ *                                               *
+ ------------------------------------------------ */
+@import 'helpers/dir';
+@import 'helpers/all';
+@import 'mixins/all';
+@import 'utilities/all';
+@import 'base/all';
+@import 'animations/all';
+@import 'themes/all';
+@import 'components/all';

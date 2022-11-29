@@ -1,0 +1,9 @@
+// theme name
+$theme-light: 'light';
+$theme-dark: 'dark';
+
+// themes
+$themes: (
+  $theme-light: (),
+  $theme-dark: (),
+) !default;

@@ -1,0 +1,30 @@
+# directories
+node_modules
+coverage
+linters
+deploy
+build
+dist
+docs
+out
+.vscode
+.next
+.yarn
+.history
+.pnpm-store
+.parcel-cache
+hint-report
+graph-dps
+playwright-report
+jest-html-reporters-attach
+
+# files
+README.md
+Dockerfile*
+docker-compose.*
+package-lock.json
+yarn.lock
+yarn-error.log
+.gitignore
+.env
+!.env.*

@@ -1,0 +1,26 @@
+﻿// Direction mixin
+@mixin ltr-props {
+  @if $dir == ltr {
+    @content;
+  }
+}
+
+@mixin rtl-props {
+  @if $dir == rtl {
+    @content;
+  }
+}
+
+@mixin rtl($property, $value) {
+  [dir='rtl'] & {
+    #{$property}: $value;
+  }
+}
+
+@mixin rtl-prop($property, $ltr-value, $rtl-value) {
+  #{$property}: $ltr-value;
+
+  [dir='rtl'] & {
+    #{$property}: $rtl-value;
+  }
+}

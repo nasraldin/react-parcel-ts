@@ -1,0 +1,72 @@
+@use 'sass:math';
+
+// Relative or absolute path/url where all assets are served from
+$base-url: '~/public/' !default;
+
+// Native `url(..)` function wrapper
+/// @param {string} $base - base URL for the asset
+/// @param {string} $type - asset type folder (e.g. `fonts/`)
+/// @param {string} $path - asset path
+/// @return url
+@function assets($base, $type, $path) {
+  @debug 'assets: #{url($base + $type + $path)}';
+
+  @return url($base + $type + $path);
+}
+
+// Returns URL to a font based on its path
+/// @param {string} $path - font path
+/// @param {string} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function fonts($path, $base: $base-url) {
+  @return assets($base, 'fonts/', $path);
+}
+
+// Returns URL to an image based on its path
+/// @param {string} $path - image path
+/// @param {string} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function images($path, $base: $base-url) {
+  @return assets($base, 'images/', $path);
+}
+
+// Returns URL to an icons based on its path
+/// @param {string} $path - icons path
+/// @param {string} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function icons($path, $base: $base-url) {
+  @return assets($base, 'icons/', $path);
+}
+
+// Unites converting px to em/rem
+$browser-context: 16;
+
+// Function for converting a px based size to rem.
+// Default size on html element is 100%, equivalent to 16px;
+@function rem($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixels, $context) * 1rem;
+}
+
+// Function for converting a px based size to em.
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixels, $context) * 1em;
+}

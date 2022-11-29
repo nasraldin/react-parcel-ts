@@ -1,0 +1,115 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: platform-frontend
+  labels:
+    app: frontend
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  minReadySeconds: 15
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ctrdev.azurecr.io/rent/backend:latest # {{BUILD_ID}}
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NEXT_PUBLIC_APP_STAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_APP_STAGE
+            - name: NEXTAUTH_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXTAUTH_URL
+            - name: NEXT_PUBLIC_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_BASE_URL
+            - name: NEXT_PUBLIC_X_API_GATEWAY_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_X_API_GATEWAY_KEY
+            - name: NEXT_PUBLIC_APP_PROXY_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_APP_PROXY_KEY
+            - name: NEXT_PUBLIC_CMS_PROXY_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_CMS_PROXY_KEY
+            - name: NEXT_PUBLIC_REDIS_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_REDIS_ENDPOINT
+            - name: NEXT_PUBLIC_ANALYTICS_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_ANALYTICS_ID
+            - name: NEXT_PUBLIC_GTMID
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_GTMID
+            - name: NEXT_PUBLIC_GTM_AUTH
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_GTM_AUTH
+            - name: NEXT_PUBLIC_GTM_PREVIEW
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config-map
+                  key: NEXT_PUBLIC_GTM_PREVIEW
+            - name: API_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-secret
+                  key: API_KEY
+            - name: NEXTAUTH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: frontend-secret
+                  key: NEXTAUTH_SECRET
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: '1'
+            requests:
+              memory: 256Mi
+              cpu: '0.2'
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: 'true'
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 3000
+      targetPort: 3000
+  selector:
+    app: frontend

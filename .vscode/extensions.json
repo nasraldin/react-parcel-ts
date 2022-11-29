@@ -1,0 +1,18 @@
+{
+  // List of extensions which should be recommended for developers of this workspace.
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "stevencl.adddoccomments",
+    "aaron-bond.better-comments",
+    "wmaurer.change-case",
+    "ms-azuretools.vscode-docker",
+    "firsttris.vscode-jest-runner",
+    "andys8.jest-snippets",
+    "ibm.output-colorizer",
+    "christian-kohler.path-intellisense",
+    "amatiasq.sort-imports",
+    "visualstudioexptteam.vscodeintellicode"
+  ]
+}

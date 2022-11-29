@@ -1,0 +1,140 @@
+html {
+  touch-action: manipulation;
+}
+
+html,
+body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  transition: all 0.1s;
+  width: 100%;
+}
+
+body {
+  backface-visibility: hidden;
+  // color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  overflow-y: visible;
+  padding: 0;
+  unicode-bidi: embed;
+
+  // @include themify($themes) {
+  //   background-color: themed(bgColor);
+  //   color: themed('textColor');
+  // }
+}
+
+// i,
+// svg,
+// fa-icon {
+//   line-height: inherit;
+
+//   &.tiny {
+//     font-size: rem(16);
+//   }
+
+//   &.small {
+//     font-size: rem(32);
+//   }
+
+//   &.medium {
+//     font-size: rem(64);
+//   }
+
+//   &.large {
+//     font-size: rem(128);
+//   }
+// }
+
+// .disable-text-select,
+// %disable-text-select {
+//   user-select: none;
+// }
+
+// .text-decoration-non,
+// %text-decoration-non {
+//   text-decoration: none;
+
+//   &:hover {
+//     text-decoration: none;
+//   }
+
+//   &:focus {
+//     text-decoration: none;
+//   }
+
+//   &:active {
+//     text-decoration: none;
+//   }
+
+//   &:visited {
+//     text-decoration: none;
+//   }
+// }
+
+// .wrapper-container {
+//   margin: 0 auto;
+//   margin-top: rem(10);
+//   max-width: 100%;
+//   padding: 0 rem(10);
+// }
+
+// .wrapper-flex {
+//   align-items: stretch;
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: wrap;
+// }
+
+// .separator {
+//   align-items: center;
+//   border-bottom: rem(1) solid $color-gray;
+//   display: flex;
+//   margin: rem(20) rem(16);
+// }
+
+// /**
+//  * Clear inner floats
+//  */
+// .clearfix::after {
+//   clear: both;
+//   content: '';
+//   display: table;
+// }
+
+// /**
+//  * Hide text while making it readable for screen readers
+//  * 1. Needed in WebKit-based browsers because of an implementation bug;
+//  *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+//  */
+// .hide-text {
+//   overflow: hidden;
+//   padding: 0;
+//   text-indent: 101%;
+//   white-space: nowrap;
+// }
+
+// /**
+//  * Hide element while making it readable for screen readers
+//  * Shamelessly borrowed from HTML5Boilerplate:
+//  * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+//  */
+// .visually-hidden {
+//   border: 0;
+//   clip: rect(0 0 0 0);
+//   height: 1px;
+//   margin: -1px;
+//   overflow: hidden;
+//   padding: 0;
+//   position: absolute;
+//   width: 1px;
+// }
+
+// .va-md {
+//   vertical-align: middle;
+// }
+
+svg:hover {
+  fill: $primary;
+}

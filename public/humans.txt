@@ -1,0 +1,26 @@
+# humanstxt.org
+# The humans responsible & technology
+
+# TEAM
+
+    Nasr Aldin -- Full Stack Engineer -- https://twitter.com/_nasraldin
+
+# THANKS
+
+    Dot Net Core Team
+    Nodejs Team
+    Angular Team
+    React.js Team
+
+# TECHNOLOGY
+
+    Nodejs
+    React.js
+    Bootstrap
+    RestAPI
+
+/* SITE */
+Last update: 2022/11/29
+Standards: Typescript
+Components: React.js, RestAPIs, Docker
+Software: VS Code

@@ -1,26 +1,83 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+deploy/*/secret**
+
+# compiled output
+/coverage
+/linters
+/build
+/dist
+/tmp
+/out-tsc
+/.cache
+/.parcel-cache
+/.history
+/hint-report
+/graph-dps
+/playwright-report/
+/playwright/.cache/
+/jest-html-reporters-attach
+
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
+.yarn/*
+.pnpm-store
+/.swc
 
-# testing
-/coverage
-
-# production
-/build
+# System Files
+.DS_Store
+Thumbs.db
 
 # misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+*.pem
+/.sass-cache
 
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
 
+# Logs
+*.log
+/logs
 
-.parcel-cache
+# local env files
+.env*
+!.env.development
+!.env.production
+!.env.stage
+!.env.test
+
+# vercel
+.vercel
+.now
+
+# typescript
+*.tsbuildinfo
+
+# profiling files
+chrome-profiler-events*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# PWA
+

@@ -1,0 +1,47 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "es2021": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:security/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "globals": {
+    "React": "readonly",
+    "JSX": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "security", "jsx-a11y", "prettier"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "react/no-unknown-property": [1, { "ignore": ["css"] }],
+    "no-duplicate-imports": "error",
+    "no-unused-vars": "off",
+    "no-plusplus": "off",
+    "no-console": 0
+  }
+}

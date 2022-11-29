@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config-map
+  namespace: platform-frontend
+data:
+  NODE_ENV: development
+  NEXT_PUBLIC_APP_STAGE: development
+  NEXTAUTH_URL: http://localhost:3000
+  NEXT_PUBLIC_BASE_URL: http://localhost:3000
+  NEXT_PUBLIC_X_API_GATEWAY_KEY: https://online-rent-bff.azurewebsites.net
+  NEXT_PUBLIC_APP_PROXY_KEY: bff
+  NEXT_PUBLIC_CMS_PROXY_KEY: cms
+  NEXT_PUBLIC_REDIS_ENDPOINT: '127.0.0.1:6379'
+  NEXT_PUBLIC_ANALYTICS_ID: 'UA-XXXXXX'
+  NEXT_PUBLIC_GTMID: 'GTM-T48QWG2'
+  NEXT_PUBLIC_GTM_AUTH: test
+  NEXT_PUBLIC_GTM_PREVIEW: 'env-qa'

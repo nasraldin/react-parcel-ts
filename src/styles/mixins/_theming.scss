@@ -1,0 +1,38 @@
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    html[data-theme='#{$theme}'] & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin theme($themeName) {
+  html[data-theme='#{$themeName}'] & {
+    @content;
+  }
+}
+
+// @mixin theme($themeName, $prop, $val) {
+//   .#{$themeName} & {
+//     #{$prop}: #{$val};
+//   }
+// }
+
+// how to use
+// @include theme('dark-theme', 'background-color', 'black');

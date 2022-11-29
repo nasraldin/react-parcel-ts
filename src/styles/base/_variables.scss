@@ -1,0 +1,83 @@
+@use 'sass:math';
+
+// Disabled styles
+// $disabled-opacity: 0.65 !default;
+
+// Text Inputs + Textarea
+// $input-height: 3rem !default;
+// $input-border-color: $primary !default;
+// $input-border: 0.0625rem solid $input-border-color !default;
+// $input-error-color: $danger !default;
+// $input-success-color: $success !default;
+// $input-focus-color: $primary !default;
+// $input-transition: all 0.3s !default;
+// $input-disabled-color: rgba(0, 0, 0, 0.26) !default;
+// $input-disabled-solid-color: #bdbdbd !default;
+// $input-disabled-border: 0.0625rem dotted $input-disabled-color !default;
+// $input-invalid-border: 0.0625rem solid $input-error-color !default;
+// $placeholder-text-color: lighten($input-border-color, 20%) !default;
+
+// Common breakpoints for widths of devices
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
+
+// Media Query Ranges
+$small-screen: 576px !default;
+$medium-screen: 768px !default;
+$large-screen: 992px !default;
+$extra-large-screen: 1200px !default;
+$extra-x-large-screen: 1400px !default;
+
+// Grid Breakpoints
+$breakpoints: (
+  sm: $small-screen,
+  md: $medium-screen,
+  lg: $large-screen,
+  xl: $extra-large-screen,
+  xxl: $extra-x-large-screen,
+) !default;
+
+// Text
+// $text-color: $primary !default;
+// $text-color-dark: $black-off !default;
+
+// $link-color: $primary !default;
+// $link-hover-color: darken($link-color, 15%) !default;
+
+// Typography
+// $font-size-base: 0.875rem;
+// $font-weight-base: 400 !default;
+// $font-weight-medium: 500 !default;
+// $font-weight-bold: 600 !default;
+
+$font-size-h1: 4.2rem !default;
+$font-size-h2: 3.56rem !default;
+$font-size-h3: 2.92rem !default;
+$font-size-h4: 2.28rem !default;
+$font-size-h5: 1.64rem !default;
+$font-size-h6: 1.15rem !default;
+
+$headings-margin-bottom: math.div(1rem, 2) !default;
+// $headings-font-family: inherit !default;
+$headings-font-weight: 400 !default;
+$headings-line-height: 1.1 !default;
+$headings-color: inherit !default;
+
+// Flow Text
+// $range: $extra-x-large-screen - $small-screen !default;
+// $intervals: 20 !default;
+// $interval-size: math.div($range, $intervals) !default;
+
+// $transition-duration: 300ms !default;
+// $gutter: 1rem !default;
+// $transition-timing: cubic-bezier(0.35, 0, 0.25, 1);
+// $sidebar-trntime: 0.3s;
+
+// sidebar
+// $sidebar-width: 16.25rem !default;
+// $compact-sidebar-width: 64px !default;
+// $compact-big-sidebar-width: 150px !default;
+// $sidebar-navigation-icon-size: 18px;

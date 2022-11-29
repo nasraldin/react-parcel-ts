@@ -1,0 +1,24 @@
+# directories
+node_modules
+coverage
+linters
+deploy
+build
+dist
+docs
+out
+.vscode
+.next
+.yarn
+.history
+public
+.pnpm-store
+.parcel-cache
+hint-report
+graph-dps
+playwright-report
+jest-html-reporters-attach
+
+src/**/*.*
+!src/**/*.scss
+*.webmanifest
