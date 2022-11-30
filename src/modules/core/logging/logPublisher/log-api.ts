@@ -30,8 +30,9 @@ export class LogAPI extends LogPublisher {
     }
   }
 
-  private handleErrors(error: any) {
-    console.error('An error occurred', error);
-    return Error(error);
+  private handleErrors(error: unknown) {
+    // eslint-disable-next-line no-console
+    console.error('LogAPI: An error occurred', error);
+    return error;
   }
 }

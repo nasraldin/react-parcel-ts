@@ -1,10 +1,10 @@
-import classnames from 'clsx';
-import React from 'react';
-import useHasMounted from '~shared/hooks/useHasMounted';
-import { LayoutType } from '../types';
 import CorePageContainer from './CorePageContainer';
-import Footer from './Footer/FooterContainer';
-import NavBar from './NavBar/NavContainer';
+import { Footer } from './Footer/FooterContainer';
+import { LayoutType } from '../types';
+import { NavBar } from './NavBar/NavContainer';
+import React from 'react';
+import classnames from 'clsx';
+import { useHasMounted } from '~shared/hooks/useHasMounted';
 // import { css } from '@emotion/react';
 
 export type Props = {

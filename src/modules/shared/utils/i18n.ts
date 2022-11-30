@@ -1,7 +1,7 @@
-import { DEFAULT_LOCALE, NEXT_LOCALE, NEXT_LOCALE_LANG_KEY, NEXT_LOCALE_QS_KEY } from '~config';
+import { APP_LOCALE, APP_LOCALE_LANG_KEY, APP_LOCALE_QS_KEY, DEFAULT_LOCALE } from '~config';
 
-import ls from 'localstorage-slim';
 import { getUrlParam } from '~utils';
+import ls from 'localstorage-slim';
 
 /**
  * Detects the language used.
@@ -9,9 +9,9 @@ import { getUrlParam } from '~utils';
  * @returns locale
  */
 export const languageDetect = (): string => {
-  const lang = getUrlParam(NEXT_LOCALE_QS_KEY);
+  const lang = getUrlParam(APP_LOCALE_QS_KEY);
 
-  return (lang as string) || (ls.get(NEXT_LOCALE) as string) || DEFAULT_LOCALE;
+  return (lang as string) || (ls.get(APP_LOCALE) as string) || DEFAULT_LOCALE;
 };
 
 /**
@@ -20,7 +20,7 @@ export const languageDetect = (): string => {
  * @returns translated text
  */
 export const _trans = (text: string) => {
-  const keyName = `${NEXT_LOCALE_LANG_KEY}_${languageDetect()}`;
+  const keyName = `${APP_LOCALE_LANG_KEY}_${languageDetect()}`;
   const cached = ls.get(keyName) as never;
   if (cached) {
     const splitT = text.split('.');

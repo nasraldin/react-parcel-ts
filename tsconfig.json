@@ -47,6 +47,8 @@
       "~utils/*": ["src/modules/shared/utils/*"],
       "~validators": ["src/modules/shared/validators"],
       "~validators/*": ["src/modules/shared/validators/*"],
+      "~logger": ["src/modules/core/logging"],
+      "~logger/*": ["src/modules/core/logging/*"],
       "~pages": ["src/pages"],
       "~pages/*": ["src/pages/*"],
       "~styles/*": ["src/styles/*"],

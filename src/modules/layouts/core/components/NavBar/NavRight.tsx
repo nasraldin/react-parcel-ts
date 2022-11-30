@@ -1,4 +1,4 @@
-import LanguageSwitcher, { MenuType } from '~shared/components/LanguageSwitcher';
+// import LanguageSwitcher, { MenuType } from '~shared/components/LanguageSwitcher';
 
 import AccountIcon from 'public/svg/account.svg';
 import AppDialog from '~shared/components/AppDialog';
@@ -7,12 +7,11 @@ import HistoryIcon from 'public/svg/history.svg';
 import LanguageIcon from 'public/svg/language.svg';
 import Nav from 'react-bootstrap/Nav';
 import NotificationsIcon from 'public/svg/notifications.svg';
-import { useState } from 'react';
 
-const NavRight = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+export const NavRight = () => {
+  // const [show, setShow] = useState(false);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);  onClick={handleShow}
 
   return (
     <Nav className="customer-icons-wrp">
@@ -23,14 +22,14 @@ const NavRight = () => {
         AED
       </Nav.Link>
       <Nav.Link>
-        <LanguageIcon onClick={handleShow} className="customer-icon" />
+        <LanguageIcon className="customer-icon" />
         <AppDialog
-          isOpen={show}
-          onClose={handleClose}
-          actions={true}
-          label={'changeLanguage' as string}
-          size="sm"
-          content={<LanguageSwitcher menuType={MenuType.Select} />}
+        // isOpen={show}
+        // onClose={handleClose}
+        // actions={true}
+        // label={'changeLanguage' as string}
+        // size="sm"
+        // content={<LanguageSwitcher menuType={MenuType.Select} />}
         />
       </Nav.Link>
       <Nav.Link>
@@ -48,5 +47,3 @@ const NavRight = () => {
     </Nav>
   );
 };
-
-export default NavRight;

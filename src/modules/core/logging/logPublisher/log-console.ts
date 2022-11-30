@@ -10,10 +10,7 @@ export class LogConsole extends LogPublisher {
 
   log(entry: LogEntry) {
     // Log to console
+    // eslint-disable-next-line no-console
     console.log(entry.buildLog());
-  }
-
-  clear() {
-    console.clear();
   }
 }

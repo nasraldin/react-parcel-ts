@@ -21,7 +21,7 @@ specifiers:
   '@types/node': ^18.11.9
   '@types/react': ^18.0.25
   '@types/react-dom': ^18.0.9
-  '@types/uuid': 8.3.4
+  '@types/uuid': 9.0.0
   '@typescript-eslint/eslint-plugin': 5.45.0
   '@typescript-eslint/parser': 5.45.0
   ajv: 8.11.2
@@ -52,7 +52,7 @@ specifiers:
   react: ^18.2.0
   react-bootstrap: 2.6.0
   react-dom: ^18.2.0
-  react-hook-form: 7.39.7
+  react-hook-form: 7.40.0
   react-hot-toast: 2.4.0
   react-select: 5.6.1
   redis: 4.5.1
@@ -88,7 +88,7 @@ dependencies:
   react: 18.2.0
   react-bootstrap: 2.6.0_2zx2umvpluuhvlq44va5bta2da
   react-dom: 18.2.0_react@18.2.0
-  react-hook-form: 7.39.7_react@18.2.0
+  react-hook-form: 7.40.0_react@18.2.0
   react-hot-toast: 2.4.0_owo25xnefcwdq3zjgtohz6dbju
   react-select: 5.6.1_34ch25xmpqfrx6wylcxtcsskau
   redis: 4.5.1
@@ -119,7 +119,7 @@ devDependencies:
   '@types/node': 18.11.9
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.9
-  '@types/uuid': 8.3.4
+  '@types/uuid': 9.0.0
   '@typescript-eslint/eslint-plugin': 5.45.0_czs5uoqkd3podpy6vgtsxfc7au
   '@typescript-eslint/parser': 5.45.0_hsf322ms6xhhd4b5ne6lb74y4a
   cross-env: 7.0.3
@@ -1315,7 +1315,7 @@ packages:
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.8.0
       browserslist: 4.21.4
-      lightningcss: 1.16.1
+      lightningcss: 1.17.1
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
@@ -1607,7 +1607,7 @@ packages:
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.8.0
       browserslist: 4.21.4
-      lightningcss: 1.16.1
+      lightningcss: 1.17.1
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
@@ -2287,9 +2287,9 @@ packages:
       { integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw== }
     dev: true
 
-  /@types/uuid/8.3.4:
+  /@types/uuid/9.0.0:
     resolution:
-      { integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw== }
+      { integrity: sha512-kr90f+ERiQtKWMz5rP32ltJ/BtULDI5RVO0uavn1HQUOwjx0R1h0rnDYNL0CepF1zL5bSY6FISAfd9tOdDhU5Q== }
     dev: true
 
   /@types/warning/3.0.0:
@@ -2736,7 +2736,7 @@ packages:
     engines: { node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7 }
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001434
+      caniuse-lite: 1.0.30001435
       electron-to-chromium: 1.4.284
       node-releases: 2.0.6
       update-browserslist-db: 1.0.10_browserslist@4.21.4
@@ -2781,9 +2781,9 @@ packages:
     engines: { node: '>=10' }
     dev: true
 
-  /caniuse-lite/1.0.30001434:
+  /caniuse-lite/1.0.30001435:
     resolution:
-      { integrity: sha512-aOBHrLmTQw//WFa2rcF1If9fa3ypkC1wzqqiKHgfdrXTWcU8C4gKVZT77eQAPWN1APys3+uQ0Df07rKauXGEYA== }
+      { integrity: sha512-kdCkUTjR+v4YAJelyiDTqiu82BDr4W4CP5sgTA0ZBmqn30XfS2ZghPLMowik9TPhS+psWJiUNxsqLyurDbmutA== }
 
   /chalk/2.4.2:
     resolution:
@@ -4600,9 +4600,9 @@ packages:
       { integrity: sha512-McGS7GV/WjJ2KjfOGhJU1oJn29RYeo7Q+RpANRbUNMQ9gj5XArpbjurSuyYPTejFwbaUojstQ4XyWCrAzGOUXw== }
     dev: false
 
-  /lightningcss-darwin-arm64/1.16.1:
+  /lightningcss-darwin-arm64/1.17.1:
     resolution:
-      { integrity: sha512-/J898YSAiGVqdybHdIF3Ao0Hbh2vyVVj5YNm3NznVzTSvkOi3qQCAtO97sfmNz+bSRHXga7ZPLm+89PpOM5gAg== }
+      { integrity: sha512-YTAHEy4XlzI3sMbUVjbPi9P7+N7lGcgl2JhCZhiQdRAEKnZLQch8kb5601sgESxdGXjgei7JZFqi/vVEk81wYg== }
     engines: { node: '>= 12.0.0' }
     cpu: [arm64]
     os: [darwin]
@@ -4610,9 +4610,9 @@ packages:
     dev: true
     optional: true
 
-  /lightningcss-darwin-x64/1.16.1:
+  /lightningcss-darwin-x64/1.17.1:
     resolution:
-      { integrity: sha512-vyKCNPRNRqke+5i078V+N0GLfMVLEaNcqIcv28hA/vUNRGk/90EDkDB9EndGay0MoPIrC2y0qE3Y74b/OyedqQ== }
+      { integrity: sha512-UhXPUS2+yTTf5sXwUV0+8QY2x0bPGLgC/uhcknWSQMqWn1zGty4fFvH04D7f7ij0ujwSuN+Q0HtU7lgmMrPz0A== }
     engines: { node: '>= 12.0.0' }
     cpu: [x64]
     os: [darwin]
@@ -4620,9 +4620,9 @@ packages:
     dev: true
     optional: true
 
-  /lightningcss-linux-arm-gnueabihf/1.16.1:
+  /lightningcss-linux-arm-gnueabihf/1.17.1:
     resolution:
-      { integrity: sha512-0AJC52l40VbrzkMJz6qRvlqVVGykkR2MgRS4bLjVC2ab0H0I/n4p6uPZXGvNIt5gw1PedeND/hq+BghNdgfuPQ== }
+      { integrity: sha512-alUZumuznB6K/9yZ0zuZkODXUm8uRnvs9t0CL46CXN16Y2h4gOx5ahUCMlelUb7inZEsgJIoepgLsJzBUrSsBw== }
     engines: { node: '>= 12.0.0' }
     cpu: [arm]
     os: [linux]
@@ -4630,9 +4630,9 @@ packages:
     dev: true
     optional: true
 
-  /lightningcss-linux-arm64-gnu/1.16.1:
+  /lightningcss-linux-arm64-gnu/1.17.1:
     resolution:
-      { integrity: sha512-NqxYXsRvI3/Fb9AQLXKrYsU0Q61LqKz5It+Es9gidsfcw1lamny4lmlUgO3quisivkaLCxEkogaizcU6QeZeWQ== }
+      { integrity: sha512-/1XaH2cOjDt+ivmgfmVFUYCA0MtfNWwtC4P8qVi53zEQ7P8euyyZ1ynykZOyKXW9Q0DzrwcLTh6+hxVLcbtGBg== }
     engines: { node: '>= 12.0.0' }
     cpu: [arm64]
     os: [linux]
@@ -4640,9 +4640,9 @@ packages:
     dev: true
     optional: true
 
-  /lightningcss-linux-arm64-musl/1.16.1:
+  /lightningcss-linux-arm64-musl/1.17.1:
     resolution:
-      { integrity: sha512-VUPQ4dmB9yDQxpJF8/imtwNcbIPzlL6ArLHSUInOGxipDk1lOAklhUjbKUvlL3HVlDwD3WHCxggAY01WpFcjiA== }
+      { integrity: sha512-/IgE7lYWFHCCQFTMIwtt+fXLcVOha8rcrNze1JYGPWNorO6NBc6MJo5u5cwn5qMMSz9fZCCDIlBBU4mGwjQszQ== }
     engines: { node: '>= 12.0.0' }
     cpu: [arm64]
     os: [linux]
@@ -4650,9 +4650,9 @@ packages:
     dev: true
     optional: true
 
-  /lightningcss-linux-x64-gnu/1.16.1:
+  /lightningcss-linux-x64-gnu/1.17.1:
     resolution:
-      { integrity: sha512-A40Jjnbellnvh4YF+kt047GLnUU59iLN2LFRCyWQG+QqQZeXOCzXfTQ6EJB4yvHB1mQvWOVdAzVrtEmRw3Vh8g== }
+      { integrity: sha512-OyE802IAp4DB9vZrHlOyWunbHLM9dN08tJIKN/HhzzLKIHizubOWX6NMzUXMZLsaUrYwVAHHdyEA+712p8mMzA== }
     engines: { node: '>= 12.0.0' }
     cpu: [x64]
     os: [linux]
@@ -4660,9 +4660,9 @@ packages:
     dev: true
     optional: true
 
-  /lightningcss-linux-x64-musl/1.16.1:
+  /lightningcss-linux-x64-musl/1.17.1:
     resolution:
-      { integrity: sha512-VZf76GxW+8mk238tpw0u9R66gBi/m0YB0TvD54oeGiOqvTZ/mabkBkbsuXTSWcKYj8DSrLW+A42qu+6PLRsIgA== }
+      { integrity: sha512-ydwGgV3Usba5P53RAOqCA9MsRsbb8jFIEVhf7/BXFjpKNoIQyijVTXhwIgQr/oGwUNOHfgQ3F8ruiUjX/p2YKw== }
     engines: { node: '>= 12.0.0' }
     cpu: [x64]
     os: [linux]
@@ -4670,9 +4670,9 @@ packages:
     dev: true
     optional: true
 
-  /lightningcss-win32-x64-msvc/1.16.1:
+  /lightningcss-win32-x64-msvc/1.17.1:
     resolution:
-      { integrity: sha512-Djy+UzlTtJMayVJU3eFuUW5Gdo+zVTNPJhlYw25tNC9HAoMCkIdSDDrGsWEdEyibEV7xwB8ySTmLuxilfhBtgg== }
+      { integrity: sha512-Ngqtx9NazaiAOk71XWwSsqgAuwYF+8PO6UYsoU7hAukdrSS98kwaBMEDw1igeIiZy1XD/4kh5KVnkjNf7ZOxVQ== }
     engines: { node: '>= 12.0.0' }
     cpu: [x64]
     os: [win32]
@@ -4680,21 +4680,21 @@ packages:
     dev: true
     optional: true
 
-  /lightningcss/1.16.1:
+  /lightningcss/1.17.1:
     resolution:
-      { integrity: sha512-zU8OTaps3VAodmI2MopfqqOQQ4A9L/2Eo7xoTH/4fNkecy6ftfiGwbbRMTQqtIqJjRg3f927e+lnyBBPhucY1Q== }
+      { integrity: sha512-DwwM/YYqGwLLP3he41wzDXT/m+8jdEZ80i9ViQNLRgyhey3Vm6N7XHn+4o3PY6wSnVT23WLuaROIpbpIVTNOjg== }
     engines: { node: '>= 12.0.0' }
     dependencies:
       detect-libc: 1.0.3
     optionalDependencies:
-      lightningcss-darwin-arm64: 1.16.1
-      lightningcss-darwin-x64: 1.16.1
-      lightningcss-linux-arm-gnueabihf: 1.16.1
-      lightningcss-linux-arm64-gnu: 1.16.1
-      lightningcss-linux-arm64-musl: 1.16.1
-      lightningcss-linux-x64-gnu: 1.16.1
-      lightningcss-linux-x64-musl: 1.16.1
-      lightningcss-win32-x64-msvc: 1.16.1
+      lightningcss-darwin-arm64: 1.17.1
+      lightningcss-darwin-x64: 1.17.1
+      lightningcss-linux-arm-gnueabihf: 1.17.1
+      lightningcss-linux-arm64-gnu: 1.17.1
+      lightningcss-linux-arm64-musl: 1.17.1
+      lightningcss-linux-x64-gnu: 1.17.1
+      lightningcss-linux-x64-musl: 1.17.1
+      lightningcss-win32-x64-msvc: 1.17.1
     dev: true
 
   /lilconfig/2.0.6:
@@ -5672,9 +5672,9 @@ packages:
       { integrity: sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew== }
     dev: true
 
-  /react-hook-form/7.39.7_react@18.2.0:
+  /react-hook-form/7.40.0_react@18.2.0:
     resolution:
-      { integrity: sha512-RT0NE1uW1bY3nAuMdzfqHrpv2+sICVFaxBOvNJsCva4if2sxPxcyJy/CSqU56UXqAdRg724CNDhjMYPSHSF3rg== }
+      { integrity: sha512-0rokdxMPJs0k9bvFtY6dbcSydyNhnZNXCR49jgDr/aR03FDHFOK6gfh8ccqB3fl696Mk7lqh04xdm+agqWXKSw== }
     engines: { node: '>=12.22.0' }
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18

@@ -1,7 +1,6 @@
 // TODO: need to be refectory
 
-import { log } from '~core/logging/logger';
-import { LogLevel } from '../../logging';
+import { LogLevel, log } from '~logger';
 export const nodeEnv = process.env.NODE_ENV || 'production';
 
 export const createSuccessResponse = (code = 200, data = {}) => ({
@@ -61,8 +60,8 @@ export const createErrorResponse = (
 };
 
 export const createResponse = (
-  request: Request,
-  response: Response,
+  // request: Request,
+  // response: Response,
   code: number,
   message: string,
   data: object | undefined,

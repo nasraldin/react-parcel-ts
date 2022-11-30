@@ -17,6 +17,6 @@ export class NotFoundError extends ErrorResponse {
     this.status = StatusCode.NotFound.status;
     this.statusText = StatusCode.NotFound.name;
     this.message = message ?? `Not Found, The ${resourceName} you are looking at is not found!`;
-    this.errors = errors!;
+    this.errors = errors;
   }
 }

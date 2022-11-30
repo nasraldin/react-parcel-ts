@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /*
 =============================================================================
 Copyright 2022 Nasr Aldin. All Rights Reserved.

@@ -6,8 +6,9 @@ The use of this source code is governed by Nasr Aldin.
 See LICENSE in the project root for license information.
 =============================================================================
 */
-import { IS_BROWSER } from '~config';
+
 import { GenericObject } from '../types';
+import { IS_BROWSER } from '~config';
 
 export function getQueryParam(prop: string) {
   // Check isBrowser

@@ -16,7 +16,8 @@ export const fetchFeatures = async () => {
       return [...result, [featureName, featureStatus]];
     }, []);
   } catch (e) {
-    // console.error('Something went wrong', e);
+    // eslint-disable-next-line no-console
+    console.error('fetchFeatures: Something went wrong', e);
   }
 
   return [] as FeatureArray[];

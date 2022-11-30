@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import Form from 'react-bootstrap/Form';
-import Select from 'react-select';
-import { SUPPORTED_LOCALES } from '~config';
-import { log } from '~core/logging/logger';
 import { LangService } from '~shared';
+import { SUPPORTED_LOCALES } from '~config';
+import Select from 'react-select';
+import { log } from '~core/logging/logger';
 
 export enum MenuType {
   Select = 'select',

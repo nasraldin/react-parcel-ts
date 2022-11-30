@@ -19,6 +19,6 @@ export class UnAuthorizedError extends ErrorResponse {
     this.message =
       message ??
       `Unauthorized, You don't have permission to request or view this page using the credentials that you supplied. ${resourceName}`;
-    this.errors = errors!;
+    this.errors = errors;
   }
 }

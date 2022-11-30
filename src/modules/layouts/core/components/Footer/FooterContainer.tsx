@@ -1,11 +1,9 @@
 import Copyright from '~shared/components/Copyright';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <>
       <Copyright />
     </>
   );
 };
-
-export default Footer;

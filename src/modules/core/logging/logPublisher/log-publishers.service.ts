@@ -17,7 +17,7 @@ export class LogPublishersService {
 
   // Build publishers array
   buildPublishers(): LogPublisher[] {
-    let logPub: any = {};
+    let logPub = {};
     const logConfig = [
       { isActive: CheckBoolean(WRITE_LOGS_TO_CONSOLE), loggerName: LogPublisherType.Console },
       { isActive: CheckBoolean(ENABLE_SEQ_LOGS), loggerName: LogPublisherType.Seq },
@@ -34,12 +34,13 @@ export class LogPublishersService {
             logPub = new LogAPI();
             break;
           case LogPublisherType.File:
-            console.warn('WRITE_LOGS_TO_FILE is not implemented.');
+            // eslint-disable-next-line no-console
+            console.warn('LogPublishersService: WRITE_LOGS_TO_FILE is not implemented.');
             break;
         }
 
         // Add publisher to array
-        this.publishers.push(logPub);
+        this.publishers.push(logPub as LogPublisher);
       }
     } catch (error) {
       this.handleErrors(error);
@@ -48,8 +49,9 @@ export class LogPublishersService {
     return this.publishers;
   }
 
-  private handleErrors(error: any) {
-    // console.error('An error occurred', error);
-    return Error(error);
+  private handleErrors(error: unknown) {
+    // eslint-disable-next-line no-console
+    console.error('LogPublishersService: An error occurred', error);
+    return error;
   }
 }

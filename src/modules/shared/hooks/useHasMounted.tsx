@@ -9,7 +9,7 @@ import React, { useState } from 'react';
  * Strongly inspired from useHasMounted
  * @see https://joshwcomeau.com/react/the-perils-of-rehydration/#abstractions
  */
-const useHasMounted = (): boolean => {
+export const useHasMounted = (): boolean => {
   const [hasMounted, setHasMounted] = useState<boolean>(false);
 
   React.useEffect(() => {
@@ -18,5 +18,3 @@ const useHasMounted = (): boolean => {
 
   return hasMounted;
 };
-
-export default useHasMounted;

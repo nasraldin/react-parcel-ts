@@ -1,10 +1,5 @@
 // Color system
-$black: rgba(0, 0, 0, 0.87) !default;
-$white: rgba(255, 255, 255, 0.87) !default;
-$color-gray: #aaa !default;
-
 $primary: #e0284f !default;
-// $primary-rgb: rgb(44, 58, 73) !default;
 // $primary-light: lighten($primary, 15%) !default;
 // $primary-dark: darken($primary, 15%) !default;
 
@@ -15,23 +10,6 @@ $primary: #e0284f !default;
 // $color-off: rgba(255, 255, 255, 0.55) !default;
 // $black-off: rgba(0, 0, 0, 0.87) !default;
 // $hover: rgba(0, 0, 0, 0.04) !default;
-
-// $success: #4caf50 !default;
-// $info: #1877f2 !default;
-// $warning: #ff9800 !default;
-// $danger: #f44336 !default;
-
-// $success-light: lighten($success, 15%) !default;
-// $success-dark: darken($success, 15%) !default;
-
-// $info-light: lighten($info, 15%) !default;
-// $info-dark: darken($info, 15%) !default;
-
-// $warning-light: lighten($warning, 15%) !default;
-// $warning-dark: darken($warning, 15%) !default;
-
-// $danger-light: lighten($danger, 15%) !default;
-// $danger-dark: darken($danger, 15%) !default;
 
 // // Brands color
 // $google: #db4437 !default;

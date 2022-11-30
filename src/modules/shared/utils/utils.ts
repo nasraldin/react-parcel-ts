@@ -89,10 +89,10 @@ export const isSessionStorageAvailable = () => {
 };
 
 /**
- * Check if is browser support canvas
+ * Check if is browser support canvas/webp
  * @returns if available return canvas
  */
-export const isWebpSupported = () => {
+export const isCanvasSupported = () => {
   // Check isBrowser
   if (!IS_BROWSER) return false;
 
@@ -110,3 +110,5 @@ export const randomInt = (min: number, max: number) => {
 
   return Math.round(num);
 };
+
+export const waitFor = (ms: number): Promise<void> => new Promise((res) => setTimeout(res, ms));

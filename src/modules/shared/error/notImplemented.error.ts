@@ -17,6 +17,6 @@ export class NotImplementedError extends ErrorResponse {
     this.status = StatusCode.NotImplemented.status;
     this.statusText = StatusCode.NotImplemented.name;
     this.message = message ?? `Not Implemented, The ${resourceName} you are looking for Not Implemented!`;
-    this.errors = errors!;
+    this.errors = errors;
   }
 }

@@ -1,6 +1,6 @@
-import * as React from 'react';
-
 import userSessionContext, { UserSessionContext } from './userSessionContext';
+
+import React from 'react';
 
 export type UserSession = UserSessionContext;
 
@@ -14,7 +14,7 @@ export type UserSession = UserSessionContext;
  *
  * @see https://slides.com/djanoskova/react-context-api-create-a-reusable-snackbar#/11
  */
-const useUserSession = (): UserSession => {
+export const useUserSession = (): UserSession => {
   return React.useContext(userSessionContext);
 };
 

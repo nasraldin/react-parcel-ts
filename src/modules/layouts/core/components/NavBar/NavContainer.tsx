@@ -1,10 +1,10 @@
 import AppLogo from '~shared/components/AppLogo';
 import Container from 'react-bootstrap/Container';
-import NavMenu from './NavLeft';
-import NavRight from './NavRight';
+import { NavMenu } from './NavLeft';
+import { NavRight } from './NavRight';
 import Navbar from 'react-bootstrap/Navbar';
 
-const NavBar = () => {
+export const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -18,5 +18,3 @@ const NavBar = () => {
     </Navbar>
   );
 };
-
-export default NavBar;

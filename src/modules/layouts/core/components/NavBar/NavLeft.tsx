@@ -1,14 +1,14 @@
-import clsx from 'clsx';
 import BlogIcon from 'public/svg/blog.svg';
 import HolidayInIcon from 'public/svg/holidayIn.svg';
 import HomeIcon from 'public/svg/home.svg';
+import Nav from 'react-bootstrap/Nav';
 import PricesIcon from 'public/svg/prices.svg';
 import RentIcon from 'public/svg/rent.svg';
 import SaleIcon from 'public/svg/sale.svg';
 import SupportIcon from 'public/svg/support.svg';
-import Nav from 'react-bootstrap/Nav';
+import clsx from 'clsx';
 
-const NavMenu = () => {
+export const NavMenu = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const NAVBAR_ROUTER_URL: any = {};
 
@@ -59,5 +59,3 @@ const NavMenu = () => {
     </Nav>
   );
 };
-
-export default NavMenu;

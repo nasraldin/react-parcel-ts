@@ -8,22 +8,22 @@ See LICENSE in the project root for license information.
 */
 
 import {
+  APP_LOCALE,
+  APP_LOCALE_DISPLAY_NAME,
+  APP_LOCALE_LANG_KEY,
+  APP_LOCALE_QS_KEY,
   CACHE_TIME_LANG,
   DEFAULT_LOCALE,
   IS_BROWSER,
   LOCALE_DEFAULT_NS,
   LOCALE_PATH,
-  NEXT_LOCALE,
-  NEXT_LOCALE_DISPLAY_NAME,
-  NEXT_LOCALE_LANG_KEY,
-  NEXT_LOCALE_QS_KEY,
   SUPPORTED_LOCALES,
 } from '~config';
-import { CheckDir, getUrlParam, Regex } from '~utils';
+import { CheckDir, Regex, getUrlParam } from '~utils';
 
-import ls from 'localstorage-slim';
 import { LogLevel } from '~core/logging/log-level';
 import { log } from '~core/logging/logger';
+import ls from 'localstorage-slim';
 
 export class LangService {
   /**
@@ -45,9 +45,9 @@ export class LangService {
    * @returns locale
    */
   languageDetect(): string {
-    const lang = getUrlParam(NEXT_LOCALE_QS_KEY);
+    const lang = getUrlParam(APP_LOCALE_QS_KEY);
 
-    return (lang as string) || (ls.get(NEXT_LOCALE) as string) || DEFAULT_LOCALE;
+    return (lang as string) || (ls.get(APP_LOCALE) as string) || DEFAULT_LOCALE;
   }
 
   getCurrentDir(): string {
@@ -68,8 +68,8 @@ export class LangService {
     const localeDisplayName = SUPPORTED_LOCALES.find((l) => l.locale === locale)?.displayName;
     const docDir = locale?.match(Regex.Arabic) ? CheckDir(true) : CheckDir(false);
 
-    ls.set(NEXT_LOCALE, locale);
-    ls.set(NEXT_LOCALE_DISPLAY_NAME, localeDisplayName);
+    ls.set(APP_LOCALE, locale);
+    ls.set(APP_LOCALE_DISPLAY_NAME, localeDisplayName);
     this.fetchTranslations(locale);
 
     if (IS_BROWSER) {
@@ -95,7 +95,7 @@ export class LangService {
     }
 
     // Cached locales data in localstorage
-    const keyName = `${NEXT_LOCALE_LANG_KEY}_${locale}`;
+    const keyName = `${APP_LOCALE_LANG_KEY}_${locale}`;
     const cached = ls.get(keyName);
 
     if (cached) {
@@ -123,7 +123,7 @@ export class LangService {
    * @returns translated text
    */
   _trans = (text: string) => {
-    const keyName = `${NEXT_LOCALE_LANG_KEY}_${this.languageDetect()}`;
+    const keyName = `${APP_LOCALE_LANG_KEY}_${this.languageDetect()}`;
     const cached = ls.get(keyName) as never;
     if (cached) {
       const splitT = text.split('.');

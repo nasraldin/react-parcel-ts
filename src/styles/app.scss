@@ -14,7 +14,7 @@ See LICENSE in the project root for license information.
  *  Author:     Nasr Aldin
  *  Author URL: https://nasraldin.com
  *  Released under the MIT license
- *  Date: 2022-09-20 T3:54
+ *  Date: 2022-11-30 T9:49
 */
 
 @charset 'UTF-8';
@@ -31,8 +31,7 @@ See LICENSE in the project root for license information.
  *             Third party styles                *
  *                                               *
  ------------------------------------------------ */
-// @import 'vendors/all';
-@import 'vendors/bootstrap';
+@import 'vendors/all';
 @import '~flag-icons/css/flag-icons.min.css';
 
 /* -----------------------------------------------*
@@ -43,8 +42,5 @@ See LICENSE in the project root for license information.
 @import 'helpers/dir';
 @import 'helpers/all';
 @import 'mixins/all';
-@import 'utilities/all';
 @import 'base/all';
-@import 'animations/all';
 @import 'themes/all';
-@import 'components/all';

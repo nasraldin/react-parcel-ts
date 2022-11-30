@@ -6,7 +6,7 @@ import {
   APP_VERSION,
   LOG_LEVEL,
   LOG_MESSAGE_TEMPLATE,
-  NEXT_VERSION,
+  REACT_VERSION,
 } from '~config';
 
 import { LogLevel } from '../log-level';
@@ -16,7 +16,7 @@ interface CLEF {
   Timestamp: Date;
   MessageTemplate: string;
   Level: LogLevel;
-  Properties: {};
+  Properties: unknown;
 }
 
 /**
@@ -25,16 +25,16 @@ interface CLEF {
 export class LogEntry {
   EventId: string = uuid();
   Timestamp = new Date(Date.now());
-  Properties: {};
+  Properties: unknown;
   Level: LogLevel = LOG_LEVEL as LogLevel;
-  Tags: [];
-  Exception?: {};
+  Tags?: [];
+  Exception?: unknown;
   MessageTemplate: string = LOG_MESSAGE_TEMPLATE;
 
-  constructor(properties: {}, level?: LogLevel, tags?: [], exception?: {}, messageTemplate?: string) {
+  constructor(properties: unknown, level?: LogLevel, tags?: [], exception?: unknown, messageTemplate?: string) {
     this.Properties = properties;
     this.Level = level ?? this.Level;
-    this.Tags = tags!;
+    this.Tags = tags;
     this.Exception = exception;
     this.MessageTemplate = messageTemplate ?? LOG_MESSAGE_TEMPLATE;
   }
@@ -50,14 +50,14 @@ export class LogEntry {
         Env: APP_ENV(),
         AppId: APP_ID,
         AppTemplateVersion: APP_TEMPLATE_VERSION,
-        NextJsVersion: NEXT_VERSION,
+        ReactVersion: REACT_VERSION,
         EventId: this.EventId,
         LogLevel: this.Level,
         User: 'SYSTEM',
         Timestamp: this.Timestamp,
         Tags: this.Tags,
-        Exception: this.Exception!,
-        ...this.Properties,
+        Exception: this.Exception,
+        ...(this.Properties as object),
       },
     };
   }

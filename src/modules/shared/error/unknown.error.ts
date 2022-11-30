@@ -17,6 +17,6 @@ export class UnknownError extends ErrorResponse {
     this.status = StatusCode.UnknownError.status;
     this.statusText = StatusCode.UnknownError.name;
     this.message = message ?? `An unknown error occurred while accessing the ${resourceName}. Please try again later!`;
-    this.errors = errors!;
+    this.errors = errors;
   }
 }

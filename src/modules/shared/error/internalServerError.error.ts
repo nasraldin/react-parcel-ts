@@ -19,6 +19,6 @@ export class InternalServerErrorError extends ErrorResponse {
     this.message =
       message ??
       `Internal Server Error, the server encountered an internal error or misconfiguration and was unable to complete your request. ${resourceName}`;
-    this.errors = errors!;
+    this.errors = errors;
   }
 }

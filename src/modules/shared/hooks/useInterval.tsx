@@ -12,7 +12,7 @@ import { useEffect, useRef } from 'react';
  * @see https://overreacted.io/making-setinterval-declarative-with-react-hooks/
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const useInterval = (callback: any, delay: number) => {
+export const useInterval = (callback: any, delay: number) => {
   const savedCallback = useRef();
 
   // Remember the latest callback.
@@ -29,8 +29,7 @@ const useInterval = (callback: any, delay: number) => {
     };
 
     const id = setInterval(tick, delay);
+
     return () => clearInterval(id);
   }, [delay]);
 };
-
-export default useInterval;

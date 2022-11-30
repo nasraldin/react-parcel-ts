@@ -17,7 +17,8 @@ export class ServiceUnavailableError extends ErrorResponse {
     this.status = StatusCode.ServiceUnavailable.status;
     this.statusText = StatusCode.ServiceUnavailable.name;
     this.message = message ?? `Service Unavailable, the server is temporarily busy, try again later! ${resourceName}`;
-    this.errors = errors!;
-    console.log('Service Unavailable');
+    this.errors = errors;
+    // eslint-disable-next-line no-console
+    console.warn('Service Unavailable');
   }
 }
