@@ -33,4 +33,4 @@ COPY --from=builder /app/build ./build
 USER reactjs
 
 EXPOSE 3000
-CMD ["pnpm", "start"]
+CMD ["pnpm", "serve"]

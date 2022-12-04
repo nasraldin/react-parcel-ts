@@ -4,14 +4,15 @@
   "editor.fontSize": 18,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "sort-imports.on-save": true,
+  // "sort-imports.on-save": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
+    "source.fixAll.eslint": true,
     "source.organizeImports": true
   },
-  "typescript.tsdk": "node_modules/.pnpm/typescript@4.9.3/node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules/.pnpm/typescript@4.9.3/node_modules/typescript/lib",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -61,5 +62,10 @@
     "web-vitals",
     "regx",
     "offcanvas",
+    "localforage",
+    "WEBSQL",
+    "INDEXEDDB",
+    "TTFB",
+    "Parens",
   ]
 }
