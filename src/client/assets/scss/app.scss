@@ -21,18 +21,18 @@ See LICENSE in the project root for license information.
 
 /* -----------------------------------------------*
  *                                               *
- *             Global styles                *
- *                                               *
- ------------------------------------------------ */
-@import 'base/colors';
-
-/* -----------------------------------------------*
- *                                               *
  *             Third party styles                *
  *                                               *
  ------------------------------------------------ */
 @import 'vendors/all';
-@import '~flag-icons/css/flag-icons.min.css';
+@import 'flag-icons/sass/flag-icons';
+
+/* -----------------------------------------------*
+ *                                               *
+ *             Global styles                     *
+ *                                               *
+ ------------------------------------------------ */
+@import 'base/colors';
 
 /* -----------------------------------------------*
  *                                               *

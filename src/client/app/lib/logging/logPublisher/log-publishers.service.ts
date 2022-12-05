@@ -1,5 +1,5 @@
-﻿import { ENABLE_SEQ_LOGS, WRITE_LOGS_TO_CONSOLE, WRITE_LOGS_TO_FILE } from '~config';
-import { CheckBoolean } from '~shared/utils';
+﻿import { ENABLE_SEQ_LOGS, WRITE_LOGS_TO_CONSOLE, WRITE_LOGS_TO_FILE } from 'config';
+import { CheckBoolean } from 'shared/utils';
 
 import { LogAPI } from './log-api';
 import { LogConsole } from './log-console';

@@ -1,4 +1,4 @@
-import { IS_BROWSER } from '~config';
+import { IS_BROWSER } from 'config';
 
 /**
  * Check value from env is boolean

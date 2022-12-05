@@ -9,7 +9,7 @@ import {
   LOG_LEVEL,
   LOG_MESSAGE_TEMPLATE,
   REACT_VERSION,
-} from '~config';
+} from 'config';
 
 import { LogLevel } from '../log-level';
 

@@ -1,5 +1,19 @@
 {
+  "compressors": {
+    "*.{html,css,js,svg,map}": [
+      "...",
+      "@parcel/compressor-gzip",
+      "@parcel/compressor-brotli"
+    ]
+  },
   "extends": "@parcel/config-default",
+  "packagers": {
+    "manifest.json": "@parcel/packager-raw-url"
+  },
+  "resolvers": [
+    "parcel-resolver-ts-base-url",
+    "..."
+  ],
   "transformers": {
     "*.svg": [
       "...",
@@ -13,15 +27,5 @@
     "*.{ts,tsx}": [
       "@parcel/validator-typescript"
     ]
-  },
-  "compressors": {
-    "*.{html,css,js,svg,map}": [
-      "...",
-      "@parcel/compressor-gzip",
-      "@parcel/compressor-brotli"
-    ]
-  },
-  "packagers": {
-    "manifest.json": "@parcel/packager-raw-url"
   }
 }

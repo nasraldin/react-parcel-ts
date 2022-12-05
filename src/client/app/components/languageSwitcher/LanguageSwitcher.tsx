@@ -2,9 +2,9 @@
 import Form from 'react-bootstrap/Form';
 import Select from 'react-select';
 
-import { SUPPORTED_LOCALES } from '~config';
-import { log } from '~logger';
-import { LangService } from '~shared';
+import { SUPPORTED_LOCALES } from 'config';
+import { log } from 'logger';
+import { LangService } from 'shared';
 
 export enum MenuType {
   Select = 'select',

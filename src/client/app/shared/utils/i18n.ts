@@ -1,7 +1,7 @@
 import ls from 'localstorage-slim';
 
-import { APP_LOCALE, APP_LOCALE_LANG_KEY, APP_LOCALE_QS_KEY, DEFAULT_LOCALE } from '~config';
-import { getUrlParam } from '~utils';
+import { APP_LOCALE, APP_LOCALE_LANG_KEY, APP_LOCALE_QS_KEY, DEFAULT_LOCALE } from 'config';
+import { getUrlParam } from 'utils';
 
 /**
  * Detects the language used.

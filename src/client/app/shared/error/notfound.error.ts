@@ -7,7 +7,7 @@ See LICENSE in the project root for license information.
 =============================================================================
 */
 
-import { ErrorResponse, ServiceError, StatusCode } from '~shared/common/http';
+import { ErrorResponse, ServiceError, StatusCode } from 'shared/common/http';
 
 export class NotFoundError extends ErrorResponse {
   constructor(errors?: ServiceError[], message?: string, resourceName?: string) {

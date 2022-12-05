@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-import { ENABLE_SEQ_LOGS, SEQ_URL } from '~config';
+import { ENABLE_SEQ_LOGS, SEQ_URL } from 'config';
 
 import { LogEntry } from './log-entry';
 import { LogPublisher } from './log-publisher';

@@ -20,9 +20,9 @@ import {
   LOCALE_DEFAULT_NS,
   LOCALE_PATH,
   SUPPORTED_LOCALES,
-} from '~config';
-import { log, LogLevel } from '~logger';
-import { CheckDir, getUrlParam, Regex } from '~utils';
+} from 'config';
+import { log, LogLevel } from 'logger';
+import { CheckDir, getUrlParam, Regex } from 'utils';
 
 export class LangService {
   /**

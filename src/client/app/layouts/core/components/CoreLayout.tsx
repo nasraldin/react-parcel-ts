@@ -1,7 +1,7 @@
 import classnames from 'clsx';
 import React from 'react';
 
-import { useHasMounted } from '~shared/hooks/useHasMounted';
+import { useHasMounted } from 'shared/hooks/useHasMounted';
 
 import { LayoutType } from '../types';
 

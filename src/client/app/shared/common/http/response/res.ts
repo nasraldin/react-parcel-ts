@@ -1,6 +1,6 @@
 // TODO: need to be refectory
 
-import { LogLevel, log } from '~logger';
+import { log, LogLevel } from 'logger';
 export const nodeEnv = process.env.NODE_ENV || 'production';
 
 export const createSuccessResponse = (code = 200, data = {}) => ({

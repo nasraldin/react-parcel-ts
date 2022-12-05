@@ -1,13 +1,13 @@
-// import LanguageSwitcher, { MenuType } from '~shared/components/LanguageSwitcher';
+// import LanguageSwitcher, { MenuType } from 'shared/components/LanguageSwitcher';
 
 import Nav from 'react-bootstrap/Nav';
 
+import { AppDialog } from 'components/dialog';
 import AccountIcon from 'public/svg/account.svg';
 import FavoritesIcon from 'public/svg/favorites.svg';
 import HistoryIcon from 'public/svg/history.svg';
 import LanguageIcon from 'public/svg/language.svg';
 import NotificationsIcon from 'public/svg/notifications.svg';
-import { AppDialog } from '~components/dialog';
 
 export const NavRight = () => {
   // const [show, setShow] = useState(false);

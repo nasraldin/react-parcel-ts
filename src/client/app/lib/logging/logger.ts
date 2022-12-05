@@ -7,7 +7,7 @@ See LICENSE in the project root for license information.
 =============================================================================
 */
 
-import { ENABLE_PROD_LOGS, LOG_LEVEL } from '~config';
+import { ENABLE_PROD_LOGS, LOG_LEVEL } from 'config';
 
 import { LogLevel } from './log-level';
 import { LogEntry, LogPublishersService } from './logPublisher';

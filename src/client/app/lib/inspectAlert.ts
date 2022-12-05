@@ -8,8 +8,8 @@ See LICENSE in the project root for license information.
 =============================================================================
 */
 
-import { IS_BROWSER } from '~config';
-import Json from '~data/json/console-alert.json';
+import { IS_BROWSER } from 'config';
+import Json from 'data/json/console-alert.json';
 
 // Print Alert message to console for inspect
 export const AlertOpenInspect = (() => {

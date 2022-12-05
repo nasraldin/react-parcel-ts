@@ -1,6 +1,6 @@
 import { Form } from 'react-router-dom';
 
-export const Contact = () => {
+export const ContactPage = () => {
   const contact = {
     first: 'Your',
     last: 'Name',
@@ -75,5 +75,3 @@ function Favorite({ contact }: any) {
     </Form>
   );
 }
-
-export default Contact;

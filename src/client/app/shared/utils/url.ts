@@ -7,7 +7,7 @@ See LICENSE in the project root for license information.
 =============================================================================
 */
 
-import { IS_BROWSER } from '~config';
+import { IS_BROWSER } from 'config';
 
 import { GenericObject } from '../types';
 

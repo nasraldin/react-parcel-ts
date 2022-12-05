@@ -7,7 +7,7 @@ See LICENSE in the project root for license information.
 =============================================================================
 */
 
-import packageJson from '~root/package.json';
+import packageJson from 'root/package.json';
 
 /*-----------------------------------------------*
  *                                               *

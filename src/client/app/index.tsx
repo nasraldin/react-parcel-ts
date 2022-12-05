@@ -1,12 +1,12 @@
-import '../assets/css/index.css';
+import 'assets/css/index.css';
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { reportWebVitals } from './lib/reportWebVitals';
-import { Contact, ErrorPage } from './pages';
-import { Root } from './routes/root';
+import { reportWebVitals } from 'lib';
+import { ContactPage, ErrorPage } from 'pages';
+import { Root } from 'routes';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'contacts/:contactId',
-        element: <Contact />,
+        element: <ContactPage />,
       },
     ],
   },

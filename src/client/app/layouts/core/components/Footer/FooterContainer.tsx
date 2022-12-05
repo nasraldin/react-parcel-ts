@@ -1,4 +1,4 @@
-import Copyright from '~layouts/core/components/Copyright';
+import Copyright from 'layouts/core/components/Copyright';
 
 export const Footer = () => {
   return (
