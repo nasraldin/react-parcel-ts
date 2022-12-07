@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web site created using parcel" />
-    <link rel="apple-touch-icon" href="./logo192.png" />
-    <link rel="manifest" href="./manifest.webmanifest" />
-    <title>React App</title>
-    <link rel="icon" href="./favicon.ico" />
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script type="module" src="../src/client/app/index.tsx"></script>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Web site created using parcel" />
+  <link rel="apple-touch-icon" href="./logo192.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <title>React App</title>
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="preload" href="./fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    noscript {
+      font-size: 22px;
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <span class="d-block" dir="ltr">
+      Please enable JavaScript to continue using this application.
+    </span>
+    <span class="d-block" dir="rtl">
+      الرجاء تفعيل جافا سكريبت لمواصلة استخدام هذا التطبيق.
+    </span>
+  </noscript>
+  <div id="root"></div>
+  <script type="module" src="../src/client/app/index.tsx"></script>
   </body>
+
 </html>

@@ -12,6 +12,7 @@
     "declaration-property-value-disallowed-list": null,
     "function-parentheses-space-inside": "never-single-line",
     "import-notation": "string",
+    "keyframes-name-pattern": null,
     "max-nesting-depth": 4,
     "no-descending-specificity": null,
     "no-empty-source": null,
@@ -23,8 +24,7 @@
     "selector-max-id": null,
     "selector-no-qualifying-type": null,
     "selector-type-no-unknown": null,
-    "value-keyword-case": null,
-    "keyframes-name-pattern": null
+    "value-keyword-case": null
   },
   "syntax": "scss"
 }

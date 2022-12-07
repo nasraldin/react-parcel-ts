@@ -21,11 +21,13 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "removeComments": true,
+    "newLine": "lf",
     "preserveConstEnums": true,
     "sourceMap": true,
     "downlevelIteration": true,
     "importHelpers": true,
     "allowSyntheticDefaultImports": true,
+    "pretty": true,
     "baseUrl": ".",
     "paths": {
       "~*": ["./*"],
@@ -69,6 +71,7 @@
   "include": ["src/**/*"],
   "exclude": [
     "node_modules",
+    "src/server",
     "coverage",
     "linters",
     "deploy",
